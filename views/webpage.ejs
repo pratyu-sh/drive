@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Framer Motion UMD -->
+    <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <title>Secure Local Drive</title>
+</head>
+
+<body class="bg-gray-100  text-gray-800 font-sans">
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center py-12 mt-10">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+
+            <!-- Heading Animation -->
+            <h1
+                class="text-3xl md:text-5xl font-bold mb-6 tracking-tight"
+                id="hero-heading"
+            >
+                Secure & Encrypted Local Data Storage
+            </h1>
+
+            <!-- Subheading Animation -->
+            <p
+                class="text-base md:text-lg mb-8 max-w-xl mx-auto"
+                id="hero-subheading"
+            >
+                Experience ultimate privacy with local storage that encrypts your files automatically. No cloud. No compromises.
+            </p>
+
+            <!-- Call-to-Action Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12" id="hero-buttons">
+                <a href="/home"
+                   class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                    Get Started
+                </a>
+                <a href="#learn-more"
+                   class="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-100 transition">
+                    Learn More
+                </a>
+            </div>
+
+            <!-- Lottie Animation Illustration -->
+            <div id="hero-image" class="mt-8">
+                <lottie-player
+                    src="https://assets2.lottiefiles.com/packages/lf20_jcikwtux.json"
+                    background="transparent"
+                    speed="1"
+                    style="width: 50%; max-width: 300px; margin: auto;"
+                    loop
+                    autoplay>
+                </lottie-player>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 text-gray-700 py-6 text-center">
+        <p>&copy; 2025 Secure Local Drive. All rights reserved.</p>
+    </footer>
+
+    <!-- Framer Motion Animation Script -->
+    <script>
+        const heading = document.getElementById('hero-heading');
+        const subheading = document.getElementById('hero-subheading');
+        const buttons = document.getElementById('hero-buttons');
+        const image = document.getElementById('hero-image');
+
+        heading.animate([{ opacity: 0, transform: 'translateY(-50px)' }, { opacity: 1, transform: 'translateY(0)' }], {
+            duration: 1000,
+            fill: 'forwards'
+        });
+
+        subheading.animate([{ opacity: 0 }, { opacity: 1 }], {
+            duration: 1000,
+            delay: 500,
+            fill: 'forwards'
+        });
+
+        buttons.animate([{ opacity: 0 }, { opacity: 1 }], {
+            duration: 1000,
+            delay: 1000,
+            fill: 'forwards'
+        });
+
+        image.animate([{ opacity: 0, transform: 'scale(0.9)' }, { opacity: 1, transform: 'scale(1)' }], {
+            duration: 1000,
+            delay: 1500,
+            fill: 'forwards'
+        });
+    </script>
+
+</body>
+
+</html>
